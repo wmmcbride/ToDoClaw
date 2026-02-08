@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanban Board</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 text-slate-100">
+    <div class="mx-auto max-w-7xl px-6 py-10">
+      <header class="mb-8 flex flex-col gap-3">
+        <div class="flex items-center justify-between gap-4">
+          <h1 class="text-3xl font-semibold tracking-tight">Kanban Board</h1>
+          <span class="rounded-full border border-slate-700 bg-slate-900/60 px-4 py-1 text-sm text-slate-300">Updated: 2026-02-07 17:45 CST</span>
+        </div>
+        <p class="text-sm text-slate-400">
+          Drag cards between columns to update status. Priority: 🔴 Urgent • 🟡 Important
+        </p>
+      </header>
+
+      <main class="grid gap-6 lg:grid-cols-4">
+        <section class="kanban-column" data-column="inbox">
+          <div class="rounded-2xl border border-red-900/60 bg-red-950/30 p-4 shadow-xl">
+            <div class="mb-4 flex items-center justify-between">
+              <h2 class="text-lg font-semibold">TO DO</h2>
+              <span class="count-pill">8</span>
+            </div>
+            <div class="kanban-list" data-list="inbox">
+              <article class="kanban-card urgent" draggable="true">
+                <p>🔴 Airtable invoice - respond to John</p>
+                <p class="mt-2 text-xs text-red-200/80">Journey • Past due</p>
+              </article>
+              <article class="kanban-card urgent" draggable="true">
+                <p>🔴 Cobalt GP data request</p>
+                <p class="mt-2 text-xs text-red-200/80">Journey • OVERDUE x2 • Headline Q4 2025</p>
+              </article>
+              <article class="kanban-card urgent" draggable="true">
+                <p>🔴 Tax filing status check</p>
+                <p class="mt-2 text-xs text-red-200/80">Journey • Feb 2 deadline</p>
+              </article>
+              <article class="kanban-card urgent" draggable="true">
+                <p>🔴 BDO USA confirmations</p>
+                <p class="mt-2 text-xs text-red-200/80">Journey • Lerer Hippeau VIII (2 requests)</p>
+              </article>
+              <article class="kanban-card urgent" draggable="true">
+                <p>🔴 409A valuation</p>
+                <p class="mt-2 text-xs text-red-200/80">Journey • Via Cake Equity</p>
+              </article>
+              <article class="kanban-card urgent" draggable="true">
+                <p>🔴 Shareholder agreement</p>
+                <p class="mt-2 text-xs text-red-200/80">Journey</p>
+              </article>
+              <article class="kanban-card" draggable="true">
+                <p>🟡 Grit Media invoice</p>
+                <p class="mt-2 text-xs text-amber-200/80">Journey • QuickBooks reminder</p>
+              </article>
+              <article class="kanban-card" draggable="true">
+                <p>🟡 Ryan Green proposal</p>
+                <p class="mt-2 text-xs text-amber-200/80">Titan • Feb 7</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="kanban-column" data-column="progress">
+          <div class="rounded-2xl border border-amber-900/60 bg-amber-950/40 p-4 shadow-xl">
+            <div class="mb-4 flex items-center justify-between">
+              <h2 class="text-lg font-semibold">IN PROGRESS</h2>
+              <span class="count-pill">1</span>
+            </div>
+            <div class="kanban-list" data-list="progress">
+              <article class="kanban-card" draggable="true">
+                <p>Stessa transaction categorization</p>
+                <p class="mt-2 text-xs text-amber-200/80">5 transactions from Feb 5-7</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="kanban-column" data-column="done">
+          <div class="rounded-2xl border border-emerald-900/70 bg-emerald-950/30 p-4 shadow-xl">
+            <div class="mb-4 flex items-center justify-between">
+              <h2 class="text-lg font-semibold">COMPLETED RECENTLY</h2>
+              <span class="count-pill">21</span>
+            </div>
+            <div class="kanban-list" data-list="done">
+              <article class="kanban-card" draggable="true">
+                <p>4 Gmail accounts connected (Journey added)</p>
+                <p class="mt-2 text-xs text-emerald-200/80">2026-02-07</p>
+              </article>
+              <article class="kanban-card" draggable="true">
+                <p>Vehicle wrap decision — WrapStar Pro (Mary)</p>
+                <p class="mt-2 text-xs text-emerald-200/80">2026-02-07</p>
+              </article>
+              <article class="kanban-card" draggable="true">
+                <p>Velly Pizza bid — dropped (51mi, outside radius)</p>
+                <p class="mt-2 text-xs text-emerald-200/80">2026-02-07</p>
+              </article>
+              <article class="kanban-card" draggable="true">
+                <p>CA Statement of Information filing</p>
+                <p class="mt-2 text-xs text-emerald-200/80">2026-02-05 • Doc# BA20260298336</p>
+              </article>
+              <article class="kanban-card" draggable="true">
+                <p>Follow up on Ashley Titan - Bobbie container</p>
+                <p class="mt-2 text-xs text-emerald-200/80">2026-02-05</p>
+              </article>
+              <article class="kanban-card" draggable="true">
+                <p>Email triage across 3 accounts</p>
+                <p class="mt-2 text-xs text-emerald-200/80">2026-02-05</p>
+              </article>
+              <article class="kanban-card" draggable="true">
+                <p>Email management setup (gog CLI)</p>
+                <p class="mt-2 text-xs text-emerald-200/80">2026-02-05</p>
+              </article>
+              <article class="kanban-card" draggable="true">
+                <p>BuildingConnected workflow v3</p>
+                <p class="mt-2 text-xs text-emerald-200/80">2026-02-05</p>
+              </article>
+              <article class="kanban-card" draggable="true">
+                <p>Brave Search API configured</p>
+                <p class="mt-2 text-xs text-emerald-200/80">2026-02-05</p>
+              </article>
+              <article class="kanban-card" draggable="true">
+                <p>Model switch: GPT-5.2 → Claude Sonnet 4.5</p>
+                <p class="mt-2 text-xs text-emerald-200/80">2026-02-05</p>
+              </article>
+              <article class="kanban-card" draggable="true">
+                <p>Added Claude Opus 4.6 with alias</p>
+                <p class="mt-2 text-xs text-emerald-200/80">2026-02-05</p>
+              </article>
+              <article class="kanban-card" draggable="true">
+                <p>Updated fallback cascade</p>
+                <p class="mt-2 text-xs text-emerald-200/80">2026-02-05</p>
+              </article>
+              <article class="kanban-card" draggable="true">
+                <p>Deleted BuildingConnected emails (8 msgs)</p>
+                <p class="mt-2 text-xs text-emerald-200/80">2026-02-05</p>
+              </article>
+              <article class="kanban-card" draggable="true">
+                <p>Sent Velly Pizza bid to Clay</p>
+                <p class="mt-2 text-xs text-emerald-200/80">2026-02-05</p>
+              </article>
+              <article class="kanban-card" draggable="true">
+                <p>Set up morning briefing cron</p>
+                <p class="mt-2 text-xs text-emerald-200/80">2026-02-05 • 7am CST daily</p>
+              </article>
+              <article class="kanban-card" draggable="true">
+                <p>Set up Stessa reminder cron</p>
+                <p class="mt-2 text-xs text-emerald-200/80">2026-02-05 • 8pm CST daily</p>
+              </article>
+              <article class="kanban-card" draggable="true">
+                <p>Built TLG Equity website</p>
+                <p class="mt-2 text-xs text-emerald-200/80">2026-02-05 • Next.js</p>
+              </article>
+              <article class="kanban-card" draggable="true">
+                <p>Researched CA Statement of Information</p>
+                <p class="mt-2 text-xs text-emerald-200/80">2026-02-05</p>
+              </article>
+              <article class="kanban-card" draggable="true">
+                <p>Created Kanban board</p>
+                <p class="mt-2 text-xs text-emerald-200/80">2026-02-05</p>
+              </article>
+              <article class="kanban-card" draggable="true">
+                <p>Set up gog CLI for Gmail/Calendar/Drive</p>
+                <p class="mt-2 text-xs text-emerald-200/80">2026-02-04</p>
+              </article>
+              <article class="kanban-card" draggable="true">
+                <p>Clean up TLG promo emails</p>
+                <p class="mt-2 text-xs text-emerald-200/80">2026-02-04</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="kanban-column" data-column="recurring">
+          <div class="rounded-2xl border border-sky-900/60 bg-sky-950/30 p-4 shadow-xl">
+            <div class="mb-4 flex items-center justify-between">
+              <h2 class="text-lg font-semibold">RECURRING</h2>
+              <span class="count-pill">4</span>
+            </div>
+            <div class="kanban-list" data-list="recurring">
+              <article class="kanban-card" draggable="true">
+                <p>Morning briefing</p>
+                <p class="mt-2 text-xs text-sky-200/80">Daily @ 7am CST (4 accounts)</p>
+              </article>
+              <article class="kanban-card" draggable="true">
+                <p>Stessa accounting reminder</p>
+                <p class="mt-2 text-xs text-sky-200/80">Daily @ 8pm CST</p>
+              </article>
+              <article class="kanban-card" draggable="true">
+                <p>Inbox triage</p>
+                <p class="mt-2 text-xs text-sky-200/80">Daily (4 accounts)</p>
+              </article>
+              <article class="kanban-card" draggable="true">
+                <p>BuildingConnected triage</p>
+                <p class="mt-2 text-xs text-sky-200/80">Every 2h (heartbeat)</p>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <template id="card-template">
+      <article class="kanban-card" draggable="true"></article>
+    </template>
+
+    <script>
+      const lists = document.querySelectorAll(".kanban-list");
+      let draggedCard = null;
+
+      const updateCounts = () => {
+        document.querySelectorAll(".kanban-column").forEach((column) => {
+          const list = column.querySelector(".kanban-list");
+          const count = list ? list.children.length : 0;
+          const pill = column.querySelector(".count-pill");
+          if (pill) {
+            pill.textContent = count;
+          }
+        });
+      };
+
+      document.addEventListener("dragstart", (event) => {
+        const target = event.target;
+        if (target.classList.contains("kanban-card")) {
+          draggedCard = target;
+          target.classList.add("opacity-60");
+        }
+      });
+
+      document.addEventListener("dragend", (event) => {
+        const target = event.target;
+        if (target.classList.contains("kanban-card")) {
+          target.classList.remove("opacity-60");
+          draggedCard = null;
+          updateCounts();
+        }
+      });
+
+      lists.forEach((list) => {
+        list.addEventListener("dragover", (event) => {
+          event.preventDefault();
+          list.classList.add("ring-2", "ring-slate-600");
+        });
+
+        list.addEventListener("dragleave", () => {
+          list.classList.remove("ring-2", "ring-slate-600");
+        });
+
+        list.addEventListener("drop", (event) => {
+          event.preventDefault();
+          list.classList.remove("ring-2", "ring-slate-600");
+          if (!draggedCard) return;
+
+          const afterElement = getDragAfterElement(list, event.clientY);
+          if (afterElement == null) {
+            list.appendChild(draggedCard);
+          } else {
+            list.insertBefore(draggedCard, afterElement);
+          }
+        });
+      });
+
+      const getDragAfterElement = (container, y) => {
+        const draggableElements = [
+          ...container.querySelectorAll(".kanban-card:not(.opacity-60)"),
+        ];
+
+        return draggableElements.reduce(
+          (closest, child) => {
+            const box = child.getBoundingClientRect();
+            const offset = y - box.top - box.height / 2;
+            if (offset < 0 && offset > closest.offset) {
+              return { offset, element: child };
+            }
+            return closest;
+          },
+          { offset: Number.NEGATIVE_INFINITY, element: null }
+        ).element;
+      };
+
+      updateCounts();
+    </script>
+
+    <style>
+      .kanban-list {
+        display: grid;
+        gap: 0.75rem;
+        min-height: 8rem;
+        transition: box-shadow 0.2s ease;
+      }
+
+      .kanban-card {
+        border-radius: 0.75rem;
+        border: 1px solid rgba(148, 163, 184, 0.15);
+        background: rgba(15, 23, 42, 0.75);
+        padding: 0.75rem 0.9rem;
+        font-size: 0.95rem;
+        line-height: 1.35rem;
+        box-shadow: 0 10px 20px rgba(15, 23, 42, 0.35);
+        cursor: grab;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .kanban-card.urgent {
+        border-color: rgba(239, 68, 68, 0.3);
+        background: rgba(127, 29, 29, 0.2);
+      }
+
+      .kanban-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 28px rgba(15, 23, 42, 0.45);
+      }
+
+      .count-pill {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 2rem;
+        height: 1.6rem;
+        padding: 0 0.45rem;
+        border-radius: 9999px;
+        border: 1px solid rgba(148, 163, 184, 0.3);
+        background: rgba(15, 23, 42, 0.7);
+        font-size: 0.75rem;
+        color: rgb(226, 232, 240);
+      }
+    </style>
+  </body>
+</html>
